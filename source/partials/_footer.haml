@@ -1,0 +1,71 @@
+%footer#contact
+  / footer begings
+  .container
+    .row
+      .col-md-12.text-center
+        %h2.section-title contact
+    .row.spacer40
+    .row
+      %form#ajax-form.form-main{:action => "php/mail-it.php", :method => "post", :name => "ajax-form", :role => "form"}
+        .col-xs-12
+          .row
+            .form-group.col-xs-6
+              %label{:for => "name2"} name
+              %input#name2.form-control{:name => "name", :onblur => "if(this.value == '') this.value='Name'", :onfocus => "if(this.value == 'Name') this.value=''", :type => "text", :value => "Name"}/
+              #err-name.error Please enter name
+            .form-group.col-xs-6
+              %label{:for => "email2"} email
+              %input#email2.form-control{:name => "email", :onblur => "if(this.value == '') this.value='E-mail';", :onfocus => "if(this.value == 'E-mail') this.value='';", :type => "text", :value => "E-mail"}/
+              #err-emailvld.error E-mail is not a valid format
+          .row
+            .form-group.col-xs-12
+              %label{:for => "message2"} message
+              %textarea#message2.form-control{:name => "message", :onblur => "if(this.value == '') this.value='Message'", :onfocus => "if(this.value == 'Message') this.value=''"} Message
+              #err-message.error Please enter message
+          .row.spacer30
+          .row
+            .col-md-8.col-md-offset-2
+              %p.text-center Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren.
+          .row.spacer10
+          .row
+            .col-xs-12.text-center
+              #ajaxsuccess E-mail was successfully sent.
+              #err-form.error There was a problem validating the form please check!
+              #err-timedout.error The connection to the server timed out!
+              #err-state.error
+              %button#send.btn.btn-default{:type => "submit"} Submit
+  .top
+    .top-line
+    %a.back-to-top
+      %i.fa.fa-angle-up
+  .container
+    .row
+      .col-xs-12.col-sm-4.col-md-4
+        %h4 KEEP IN TOUCH
+        .footer-socials
+          %a{:href => "#"}
+            %i.fa.fa-facebook
+          %a{:href => "#"}
+            %i.fa.fa-google-plus
+          %a{:href => "#"}
+            %i.fa.fa-twitter
+          %a{:href => "#"}
+            %i.fa.fa-pinterest
+      .col-xs-12.col-sm-4.col-md-4
+        %h4 ADDRESS
+        %p
+          643 Newcastle St
+          %br/
+          Leederville WA 6007, Australia
+        %p
+          +1 888-587-8421
+          %br/
+          %a{:href => "#"} www.domain.com
+          %br/
+          info@domain.com
+      .col-xs-12.col-sm-4.col-md-4
+        %h4 SUPPORT
+        %p You need support? Visit our support forum and open tickets for you questions.
+        %p
+          %button.btn.btn-primary{:type => "button"} forum
+  .spacer100

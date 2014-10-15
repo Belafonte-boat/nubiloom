@@ -1,0 +1,60 @@
+%section#job
+  .container
+    .row
+      .col-md-12.text-center
+        %h2.section-title developer jobs
+    .row.spacer40
+    .row
+      .col-md-8.col-md-offset-2
+        %p.lead Fusce in tellus posuere, ullamcorper massa ut, posuere dolor. Aliquam sit amet adipiscing magna. Cras vitae tellus eget turpis tincidunt mattis. In tincidunt ante nisi
+    .row.spacer60
+    .row
+      .col-md-12
+        #parallax-four.parallax{:style => "background-image:url(img/parallax/4.png);"}
+          .parallax-text-container-4
+            .parallax-text-item
+              We are looking for a web front-end developer
+    .row.spacer100
+    .row
+      %form{:role => "form"}
+        .col-xs-12
+          .row
+            .form-group.col-xs-6
+              %label{:for => "name"} name
+              %input#name.form-control{:placeholder => "Enter Name", :type => "text"}/
+            .form-group.col-xs-6
+              %label{:for => "city"} city
+              %input#city.form-control{:placeholder => "Enter City", :type => "text"}/
+          .row
+            .form-group.col-xs-6
+              %label{:for => "email"} email
+              %input#email.form-control{:placeholder => "Enter Email", :type => "email"}/
+            .form-group.col-xs-6
+              %label{:for => "state"} state
+              %input#state.form-control{:placeholder => "Enter State", :type => "text"}/
+          .row
+            .form-group.col-xs-6
+              %label{:for => "company"} company
+              %input#company.form-control{:placeholder => "Enter Company", :type => "text"}/
+            .form-group.col-xs-6
+              %label{:for => "zip"} zip code
+              %input#zip.form-control{:placeholder => "Enter Zip", :type => "text"}/
+          .row
+            .form-group.col-xs-6
+              %label{:for => "work"} work address
+              %input#work.form-control{:placeholder => "Enter Address", :type => "text"}/
+            .form-group.col-xs-6
+              %label{:for => "country"} Country
+              %input#country.form-control{:placeholder => "Enter Country", :type => "text"}/
+          .row
+            .form-group.col-xs-12
+              %label{:for => "message"} message
+              %textarea#message.form-control{:placeholder => "Enter Message"}
+          .row.spacer30
+          .row
+            .col-md-8.col-md-offset-2
+              %p.text-center Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren.
+          .row.spacer10
+          .row
+            .col-xs-12.text-center
+              %button.btn.btn-default{:type => "submit"} Submit

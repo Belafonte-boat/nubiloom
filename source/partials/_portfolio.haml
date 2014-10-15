@@ -1,0 +1,153 @@
+%section#portfolio
+  .container
+    .row
+      .col-sm-12.col-md-12.text-left
+        %h2.section-title-portfolio MODERN PORTFOLIO
+        .portfolio-share-block
+          %a.portfolio-email{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Send"}
+            %i.fa.fa-envelope-o
+          %a.portfolio-share-fb{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Share"}
+            %i.fa.fa-facebook
+          %a.portfolio-like{"data-placement" => "top", "data-toggle" => "tooltip", :href => "#", :title => "Like"}
+            %i.fa.fa-heart-o
+  .portfolio-fullwidth
+    .container
+      .row
+        .col-xs-12
+          %ul#portfolio-filter
+            %li.act
+              %a.filter{"data-filter" => "*", :href => "#"} All
+            %li
+              %a.filter{"data-filter" => ".photography", :href => "#"} Photography
+            %li
+              %a.filter{"data-filter" => ".webdesign", :href => "#"} Web Design
+            %li
+              %a.filter{"data-filter" => ".html", :href => "#"} HTML/CSS
+      .row
+        .col-md-12
+          %section#portfolio-items
+            %ul.portfolio.row
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,webdesign"}
+                  .media-container
+                    .media-file
+                      %a.ajax-popup-link{:href => "project-1.html"}
+                        %img{:alt => "", :src => "img/portfolio/1.jpg"}/
+                      / link to a project
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "webdesign,html"}
+                  .media-container
+                    .media-file
+                      %a.ajax-popup-link{:href => "project-1.html"}
+                        %img{:alt => "", :src => "img/portfolio/2.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,html"}
+                  .media-container
+                    .media-file
+                      %a.ajax-popup-link{:href => "project-2.html"}
+                        %img{:alt => "", :src => "img/portfolio/3.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,webdesign"}
+                  .media-container
+                    .media-file.gallery
+                      %a{:href => "img/portfolio/1.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/1.jpg"}/
+                      %a.hidden{:href => "img/portfolio/2.jpg", :title => "image description"}
+                      %a.hidden{:href => "img/portfolio/3.jpg", :title => "image description"}
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,webdesign"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/5.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/5.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "webdesign,html"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/6.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/6.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,html"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/7.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/7.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "html,webdesign"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/8.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/8.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,webdesign"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/9.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/9.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "webdesign,html"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/10.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/10.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "photography,html"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/11.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/11.jpg"}/
+              %li
+                %article.col-md-3.col-sm-4.col-xs-6.project{"data-tags" => "html"}
+                  .media-container
+                    .media-file
+                      %a.popup-link{:href => "img/portfolio/12.jpg", :title => "When Gregor Samsa woke from troubled dreams."}
+                        %img{:alt => "", :src => "img/portfolio/12.jpg"}/
+      .spacer100
+      .row
+        .col-md-12
+          / <iframe class="video-content" src="http://player.vimeo.com/video/86891580" ></iframe>
+      .spacer60
+  .logos-full
+    .container
+      .row
+        .col-md-12
+          .logos
+            %span.logo-cell
+              %a{:href => "#"}
+                %img{:alt => "client1", :src => "img/logos/1.png"}/
+            %span.logo-cell
+              %a{:href => "#"}
+                %img{:alt => "client1", :src => "img/logos/2.png"}/
+            %span.logo-cell
+              %a{:href => "#"}
+                %img{:alt => "client1", :src => "img/logos/3.png"}/
+            %span.logo-cell
+              %a{:href => "#"}
+                %img{:alt => "client1", :src => "img/logos/4.png"}/
+            %span.logo-cell
+              %a{:href => "#"}
+                %img{:alt => "client1", :src => "img/logos/5.png"}/
+  #parallax-five.parallax{:style => "background-image:url(img/parallax/5.png);"}
+    .parallax-colored
+      .parallax-text-container-5
+        .parallax-text-item
+          .container
+            .row
+              .col-md-12
+                .testimonal-slider
+                  %ul.slides
+                    %li
+                      .testimonal
+                        %h3.white-text OVNI SAVE MY BUSINESS :)
+                        %p.white-text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.
+                        %h5.white-text WINNIE DOREN
+                    %li
+                      .testimonal
+                        %h3.white-text THANK YOU FOR AWESOME DESIGN
+                        %p.white-text Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                        %h5.white-text DONAL MACINTOSH
+                    %li
+                      .testimonal
+                        %h3.white-text HAPPY CLIENTS SAY
+                        %p.white-text There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.
+                        %h5.white-text ANETA SHMITMAYER
