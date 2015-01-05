@@ -12,9 +12,10 @@ gem "therubyracer", :platforms => [:ruby]
 gem 'oj'
 gem "wdm", :platforms => [:mswin, :mingw]
 
+gem "compass"
 gem "susy"
 gem "compass-h5bp"
-gem 'compass-sourcemaps'
+
 gem "builder"
 
 gem 'oily_png'
