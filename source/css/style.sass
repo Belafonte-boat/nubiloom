@@ -1,12 +1,32 @@
+@import bootstrap
+@import font-awesome
+@import components
+@import animate
+@import flexslider
+@import magnific-popup
+@import YTPlayer
+@import responsive
+
+$cadet: #516570
+$valencia: #E25550
+$teal-blue: #367787
+$blue-chill: #45999C
+$portorico: #5BBDA7
+$colonial-white: #F2E4BD
+
+#logo
+  visibility: hidden
+
+
 .animated
   visibility: hidden
 
-/* Mobile menu
+
 
 .select-menu
   display: none
 
-/*	Base
+
 
 \::-moz-selection, ::selection
   background: #999
@@ -179,7 +199,7 @@ img
   border: 0
   -ms-interpolation-mode: bicubic
 
-/* Navigation
+
 
 .navbar
   padding: 0px 0px 0px 0px
@@ -207,7 +227,7 @@ img
     margin-top: -4px
     width: auto
     max-height: 70px
-    max-width: 80px
+    
 
 .navbar-inner
   box-shadow: none !important
@@ -216,7 +236,7 @@ img
   background-color: transparent
   background-image: none !important
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false)
-  border: 0px solid #d4d4d4
+  border: 0px solid $cadet
   -webkit-border-radius: 0px
   -moz-border-radius: 0px
   border-radius: 0px
@@ -267,7 +287,7 @@ img
   li:first-child > a
     margin-left: 0px
 
-/* services
+
 
 .services-1
   position: relative
@@ -310,7 +330,7 @@ img
     width: 60px
     height: 60px
     line-height: 60px
-    background: #282A2E
+    
     margin: 0px auto
     position: relative
     display: inline-block
@@ -342,7 +362,7 @@ img
   margin: 12px 0px 0px 0px
   text-align: left
 
-/* Counter
+
 
 .counter-item
   position: relative
@@ -364,7 +384,7 @@ img
 
 .counter-item p
 
-/* Clients
+
 
 .clients
   position: relative
@@ -375,7 +395,7 @@ img
     padding: 0px
     width: 100%
 
-/* Our team
+
 
 .team
   position: relative
@@ -485,7 +505,7 @@ img
   opacity: 1
   z-index: 2
 
-/* parallax
+
 
 .parallax
   width: 100%
@@ -584,7 +604,7 @@ img
 .parallax-colored
   background-color: rgba(53, 84, 117, 0.7)
 
-/*portfolio
+
 
 .portfolio-header
   position: relative
@@ -763,7 +783,6 @@ img
 .projects-slider [class*="col-"]
   padding: 0px
 
-/*	Portfolio Filter
 
 #portfolio-filter
   margin: 0px 0px 43px 0px
@@ -792,7 +811,7 @@ img
       text-decoration: none
       background: #404449
 
-/*	Portfolio - Isotype (filtering tags)
+
 
 .isotope-item
   z-index: 2
@@ -801,7 +820,7 @@ img
   pointer-events: none
   z-index: 1
 
-/* Isotope CSS3 transitions
+
 
 .isotope
   -webkit-transition-duration: 0.4s
@@ -844,9 +863,9 @@ img
     -o-transition-duration: 0s
     transition-duration: 0s
 
-/* disabling Isotope CSS3 transitions
 
-/* logos
+
+
 
 .logos-full
   background: #F5F6FA
@@ -938,7 +957,6 @@ img
     height: 60px
     line-height: 60px !important
 
-/*footer
 
 .footer-socials
   position: relative
@@ -979,7 +997,6 @@ footer p
   border: 0px
   margin-bottom: -7px
 
-/* contact form
 
 .error
   margin: 8px 0px
@@ -994,7 +1011,7 @@ footer p
   color: #282A2E
   margin: 8px 0px
 
-/* SLIDERS
+
 
 .main-slider
   .slides img
@@ -1057,7 +1074,7 @@ footer p
     -khtml-opacity: 1
     opacity: 1
 
-/*  flex center nav
+
 
 .main-sliderv .flexslider:hover .flex-prev:hover
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
@@ -1074,7 +1091,7 @@ footer p
   .flex-control-nav
     display: none
 
-/* slider for video
+
 
 .main-slider-video
   margin: 0px
@@ -1147,7 +1164,6 @@ footer p
   .flex-control-nav
     display: none
 
-/*  flex bottom  nav
 
 .projects-slider
   margin: 0px
@@ -1296,8 +1312,6 @@ footer p
   .flex-direction-nav
     display: none
 
-/*  flex bottom with thumbnail nav
-
 .bottom-nav-content-slider
   margin: 0px
   border: 0px solid #000
@@ -1352,7 +1366,7 @@ footer p
       opacity: 1
       cursor: default
 
-/*  flex laptop slider center nav
+
 
 .laptop
   position: relative
@@ -1465,7 +1479,7 @@ footer p
   .flex-control-nav
     display: none
 
-/* thumbnail slider
+
 
 .thumbnail-slider .flex-control-thumbs
   margin: 0px 0 0
@@ -1476,7 +1490,7 @@ footer p
     float: left
     margin: 0
 
-/* refine slider  for thumbnail content
+
 
 ul.rs-slider
   margin: 0 0 0px 0px
@@ -1510,7 +1524,7 @@ ul.rs-slider
   margin: 0px
   border-top: 1px #E7EBEF solid
 
-/* Spacer classes
+
 
 .spacer1
   height: 1px !important

@@ -2,58 +2,69 @@
   .container
     .row
       .col-md-12.text-center
-        %h2.section-title about
+        %h2.section-title Cloud Advantages
     .row.spacer40
     .row
-      .col-md-6
-        .thumbnail-slider
-          %ul.slides
-            %li{"data-thumb" => "img/slider-content/1.jpg"}
-              %a.popup-link{:href => "img/slider-content/1.jpg", :title => "title"}
-                %img{:alt => "", :src => "img/slider-content/1.jpg"}/
-            %li{"data-thumb" => "img/slider-content/2.jpg"}
-              %a.popup-link{:href => "img/slider-content/2.jpg", :title => "title"}
-                %img{:alt => "", :src => "img/slider-content/2.jpg"}/
-            %li{"data-thumb" => "img/slider-content/3.jpg"}
-              %a.popup-link{:href => "img/slider-content/3.jpg", :title => "title"}
-                %img{:alt => "", :src => "img/slider-content/3.jpg"}/
-            %li{"data-thumb" => "img/slider-content/4.jpg"}
-              %a.popup-link{:href => "img/slider-content/4.jpg", :title => "title"}
-                %img{:alt => "", :src => "img/slider-content/4.jpg"}/
-            %li{"data-thumb" => "img/slider-content/5.jpg"}
-              %a.popup-link{:href => "img/slider-content/5.jpg", :title => "title"}
-                %img{:alt => "", :src => "img/slider-content/5.jpg"}/
-      .col-md-6
-        .spacer15
-        %h3 Our Studio
-        %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
+      .col-md-8.col-sm-8
+        %img{:alt => "", "data-ani" => "animated", "data-type" => "fadeIn", :src => "img/mockup/1.png"}/
+      .col-md-4.col-sm-4
+        %h3 
+          Achieve economies of scale 
         %p
-          Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-        %p Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
-        .spacer20
-        %p.text-right
-          %button.btn.btn-primary.btn-lg{:type => "button"} Presentation
-    .row.spacer80
-    .row
-      .col-md-4
-        %h3 Clients
+          Increase volume output or productivity with fewer people. Your cost per unit, project or product plummets.
+        %h3 
+          Reduce spending on technology infrastructure
+        %p 
+          Maintain easy access to your information with minimal upfront spending. Pay as you go (weekly, quarterly or yearly), based on demand.
+        %h3
+          Security 
         %p
-          Duden flows by their place and supplies it
-          with the necessary regelialia. It is a paradisem country, in which roasted parts of sentences
-          into your mouth.
-      .col-md-8
-        .row
-          .clients
-            .col-xs-12.col-sm-3.col-md-3
-              %a{:href => "#"}
-                %img{:alt => "client1", :src => "img/clients/1.jpg"}/
-            .col-xs-12.col-sm-3.col-md-3
-              %a{:href => "#"}
-                %img{:alt => "client1", :src => "img/clients/2.jpg"}/
-            .col-xs-12.col-sm-3.col-md-3
-              %a{:href => "#"}
-                %img{:alt => "client1", :src => "img/clients/3.jpg"}/
-            .col-xs-12.col-sm-3.col-md-3
-              %a{:href => "#"}
-                %img{:alt => "client1", :src => "img/clients/4.jpg"}/
-    .row.spacer100
+          Highly secure data centers utilize state-of-the art electronic surveillance and multi-factor access control systems and staffed 24/7 by trained security guards.
+        %h3
+          Reduce capital costs
+        %p 
+          There’s no need to spend big money on hardware, software or licensing fees.
+        %h3
+          Improve accessibility
+        %p
+          You have access anytime, anywhere, making your life so much easier!
+        %h3
+          No hardware learning
+        %p
+          It takes fewer people to do more work on a cloud, no need for hardware learning.
+        %h3 
+          Improve flexibility
+        %p
+          You can change direction without serious “people” or “financial” issues at stake.
+
+    .row.spacer120
+  #parallax-one.parallax{:style => "background-image:url(img/parallax/back.png);"}
+    .parallax-text-container-1
+      .parallax-text-item
+        .container
+          .row
+            .col-xs-6.col-sm-3.col-md-3
+              .counter-item
+                %i
+                  = image_tag "banner/1.png"
+                #item1.timer{"data-speed" => "5000", "data-to" => "82"}
+                %h5 % of companies save money by oving to the cloud
+            .col-xs-6.col-sm-3.col-md-3
+              .counter-item
+                %i
+                  = image_tag "banner/2.png"
+                #item2.timer{"data-speed" => "5000", "data-to" => "80"}
+                %h5 % of cloud adopters saw improvement within 6 months
+            .col-xs-6.col-sm-3.col-md-3
+              .counter-item
+                %i
+                  = image_tag "banner/3.png"
+                #item3.timer{"data-speed" => "5000", "data-to" => "1000000"}
+                %h5 tb of data are already stored in the cloud 
+            .col-xs-6.col-sm-3.col-md-3
+              .counter-item
+                %i
+                  = image_tag "banner/4.png"
+                #item4.timer{"data-speed" => "5000", "data-to" => "920000"}
+                %h5 $ per year in productivity are saved up to by company with 100 employees
+    

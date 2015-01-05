@@ -1,106 +1,138 @@
 %section#services
   .container
     .row
-      .col-md-12.text-center
-        %h2.section-title services
-    .row.spacer40
-    .row
-      .col-md-12
-        %p.lead Fusce in tellus posuere, ullamcorper massa ut, posuere dolor. Aliquam sit amet adipiscing magna. Cras vitae tellus eget turpis tincidunt mattis. In tincidunt ante nisi. Donec non tortor lectus. Aliquam fringilla consectetur eleifend. Donec id elementum eros.
-    .row.spacer50
-    .row
-      .col-md-3.col-xs-6
-        .services-1
-          .services-1-icon
-            %i.fa.fa-lightbulb-o
-          .services-1-title HTML / CSS
-      .col-md-3.col-xs-6
-        .services-1
-          .services-1-icon
-            %i.fa.fa-laptop
-          .services-1-title WORDPRESS
-      .col-md-3.col-xs-6
-        .services-1
-          .services-1-icon
-            %i.fa.fa-tablet
-          .services-1-title APPLICATIONS
-      .col-md-3.col-xs-6
-        .services-1
-          .services-1-icon
-            %i.fa.fa-globe
-          .services-1-title PARTY
-    .row.spacer70
-    .row
       .col-md-12
         %hr.small-line/
     .row.spacer100
     .row
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i.fa.fa-female
-            %h4 HTML / CSS
-          .services-2-text
-            %p Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i.fa.fa-bell-o
-            %h4 MODERN GRAPHIC DESIGN
-          .services-2-text
-            %p Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i.fa.fa-gamepad
-            %h4 SERVER OPTIMALIZATION
-          .services-2-text
-            %p Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
+      .col-md-12.text-center
+        %h2.section-title services
+    .row.spacer50
+    
     .row
       .col-md-4.col-xs-12
         .services-2
           .services-2-icon
-            %i.fa.fa-cloud-upload
-            %h4 CLOUD HOSTING
+            %i
+              = image_tag "icons/ec2.svg"
+            %h4 EC2 Instances
           .services-2-text
-            %p Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
+            %p Elastic Cloud Compute (EC2) provides the core of Amazon's scalable computing offering. With complete control over your virtual computing environment, EC2 lets you create and boot new server instances in minutes, scaling dynamically to handle fluctuations in demand.
       .col-md-4.col-xs-12
         .services-2
           .services-2-icon
-            %i.fa.fa-exchange
-            %h4 RESPONSIVE LAYOUT
+            %i
+              = image_tag "icons/rds.svg"
+            %h4 RDS Databases
           .services-2-text
-            %p Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
+            %p RDS provides Relational Database Services for your application. RDS also handles automatic database backups with user-defined retention periods, reducing the time a DBA spends doing database maintenance tasks.
       .col-md-4.col-xs-12
         .services-2
           .services-2-icon
-            %i.fa.fa-bolt
-            %h4 SOCIAL MARKETING
+            %i
+              = image_tag "icons/ddb.svg"
+            %h4 No-SQL Databses
           .services-2-text
-            %p Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named.
-    .row.spacer120
-  #parallax-one.parallax{:style => "background-image:url(img/parallax/1.png);"}
-    .parallax-text-container-1
-      .parallax-text-item
-        .container
-          .row
-            .col-xs-6.col-sm-3.col-md-3
-              .counter-item
-                %i.fa.fa-cloud-upload
-                #item1.timer{"data-speed" => "5000", "data-to" => "3991"}
-                %h5 Files uploaded
-            .col-xs-6.col-sm-3.col-md-3
-              .counter-item
-                %i.fa.fa-check
-                #item2.timer{"data-speed" => "5000", "data-to" => "6394"}
-                %h5 Projects completed
-            .col-xs-6.col-sm-3.col-md-3
-              .counter-item
-                %i.fa.fa-coffee
-                #item3.timer{"data-speed" => "5000", "data-to" => "18745"}
-                %h5 Cups consumed
-            .col-xs-6.col-sm-3.col-md-3
-              .counter-item
-                %i.fa.fa-male
-                #item4.timer{"data-speed" => "5000", "data-to" => "9999"}
-                %h5 Happy clients
+            %p Amazon DynamoDB is a fully managed NoSQL database service that provides extremely fast and predictable performance with seamless scalability. Amazon SimpleDB provides a non-relational service designed for smaller datasets. Or we can run your own NoSQL databases on Amazon EC2 and Amazon EBS with full control over your database.
+    .row
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/cf.svg"
+            %h4 Cloudformation Templating
+          .services-2-text
+            %p CloudFormation makes creating and managing stacks (collections of AWS resources) simple. Resource dependencies are automatically handled for you, which makes deployment more predictable and less stressful.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/iam.svg"
+            %h4 IAM Access Security
+          .services-2-text
+            %p The Identity and Access Management (IAM) capabilities of AWS give you secure access control for both users and integrated systems. Integration with existing identity federation systems eliminates duplication when granting and revoking access.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/sqs.svg"
+            %h4 SQS Message Queuing
+          .services-2-text
+            %p Queueing and delivering messages between servers requires a high degree of scalability and reliability. Amazon SQS is a hosted service which gives AWS developers an easy-to-integrate solution to this problem.
+    .row
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/s3.svg"
+            %h4 S3 Storage
+          .services-2-text
+            %p Amazon's S3 provides scalable storage in the cloud for your application's data. Using S3 eliminates the issues associated with anticipating user/system data and trying to purchase hardware accordingly. With S3, you have access to exactly the amount of storage space you need at all times.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/ec.svg"
+            %h4 Cache and CDN
+          .services-2-text
+            %p ElastiCache automatically detects and replaces failed nodes, reducing the overhead associated with self-managed infrastructures and provides a resilient system that mitigates the risk of overloaded databases, which slow website and application load times. 
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/ebs.svg"
+            %h4 EBS Load Balancing
+          .services-2-text
+            %p Elastic Load Balancing (ELB) gives AWS developers a way to automatically distribute incoming traffic to multiple EC2 instances which helps with fault tolerance, application performance, and even multi-zone deployments.
+    .row
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/route53.svg"
+            %h4 DNS Route 53
+          .services-2-text
+            %p Route 53 effectively connects user requests to infrastructure running in AWS and can also be used to route users to infrastructure outside of AWS. You can use Amazon Route 53 to configure DNS health checks to route traffic to healthy endpoints or to independently monitor the health of your application and its endpoints.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/cw.svg"
+            %h4 Cloudwatch monitoring
+          .services-2-text
+            %p Cloudwatch provides customizable monitors and alerts, allowing your application to react automatically to pre-defined critical events like CPU over-utilization.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/lambda.svg"
+            %h4 Lambda
+          .services-2-text
+            %p A compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information.
+    .row
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/ses.svg"
+            %h4 Transactional emails
+          .services-2-text
+            %p With Amazon SES,Simple Email Service, you can send transactional email, marketing messages, or any other type of high-quality content and you only pay for what you use.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/opw.svg"
+            %h4 Continuous Deployment
+          .services-2-text
+            %p Techniques such as automated testing, continuous integration and continuous deployment allow software to be developed to a high standard and easily packaged and deployed to test environments with minimal manual overhead.
+      .col-md-4.col-xs-12
+        .services-2
+          .services-2-icon
+            %i
+              = image_tag "icons/node.svg"
+            %h4 Node development
+          .services-2-text
+            %p Node.js operates on a single thread, using non-blocking I/O calls, allowing it to support tens of thousands of concurrent connections, without worrying about the cost of context-switching between threads. 
+ 
+ 
