@@ -1,3 +1,17 @@
+$(window).scroll(function() {
+// 100 = The point you would like to fade the nav in.
+  
+  if ($(window).scrollTop() > 100 ){
+    
+    $('p.ls-l').fadeOut();
+    
+  } else {
+    
+    $('p.ls-l').fadeIn();
+    
+  };    
+});
+
 
 // If JavaScript is enabled remove 'no-js' class and give 'js' class
 jQuery('html').removeClass('no-js').addClass('js');
