@@ -29,20 +29,21 @@ metas: "main"
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
 
+    %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300italic,400italic,400,300", :rel=>'stylesheet',:type=>'text/css'}
     / Layer slider
     %link{:href => "layerslider/css/layerslider.css", :media => "screen", :rel => "stylesheet"}/
     
     / Style css
     = stylesheet_link_tag "style"
 
-    / Google Fonts
-    %link{:href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300&amp;subset=latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese", :rel => "stylesheet", :type => "text/css"}/
+
+    
     / Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements
     /[if lt IE 9]
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     / Modernizr js
     %script{:src => "js/modernizr.js"}
+    %script{:src => "js/twitterFetcher.js"}
   %body
     = yield
 

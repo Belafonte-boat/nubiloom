@@ -13,5 +13,6 @@
     "components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {}
 }

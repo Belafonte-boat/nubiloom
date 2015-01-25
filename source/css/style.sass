@@ -14,6 +14,91 @@ $blue-chill: #45999C
 $portorico: #5BBDA7
 $colonial-white: #F2E4BD
 
+@mixin border-radius($radius) 
+  -webkit-border-radius: $radius
+  border-radius: $radius
+  background-clip: padding-box  /* stops bg color from leaking outside the border: */
+
+p.work
+  margin-top: 20px
+  font-size: 20px
+  color: $teal-blue
+  font-family: 'Montserrat', sans-serif
+//twitter
+h2.interval
+  text-align: left
+  margin-top: 20px
+#hash-list
+  ul
+    list-style-type: none
+    text-align: left
+    margin-left: 0
+    margin-bottom: 50px
+    padding: 0
+    a
+      color: $portorico
+      line-height: 26px
+      font-size: 22px
+      font-family: 'Montserrat', sans-serif
+      &.active
+        color: $valencia
+.twitter
+  ul
+    list-style-type: none
+  text-align: left
+  .tweet
+    padding-top: 5px
+    a
+      color: $portorico
+
+  p.interact
+    display: none
+  .user
+    text-align: left
+    a
+      color: $cadet
+
+      text-align: left
+      font-family: 'Montserrat', sans-serif
+      span
+        padding-left: 5px
+        color: $cadet
+        font-weight: bold
+      img
+        +border-radius( 25px )
+  ul
+    overflow: hidden
+  li
+    @extend .col-md-6
+    font-family: 'Open sans', sans-serif
+    vertical-align: top
+    display: inline-block
+    &:nth-child(2n+1)
+      clear: both
+
+
+h2.section-title.vision
+  color: $portorico
+  font-size: 30px
+  line-height: 30px
+  text-align: left
+  text-transform: none
+  font-family: 'Montserrat', sans-serif
+
+p.author
+  color: $portorico
+  font-size: 30px
+  text-align: right
+  font-style: italic
+  font-family: 'Montserrat', sans-serif
+p.quote
+  color: $teal-blue
+  font-size: 50px
+  line-height: 46px
+  text-align: left
+  font-style: italic
+  font-family: 'Montserrat', sans-serif
+
 p.ls-l
   position: absolute
   left: 48%
@@ -79,7 +164,7 @@ a
 
 h1, h2, h3, h4, h5, h6
   font-family: 'Montserrat', sans-serif
-  color: #282A2E
+  color: $cadet
   line-height: 1.3em
   margin-top: 0px
   margin-bottom: 15px
@@ -95,15 +180,15 @@ h1
   color: #FFF
 
 h2
-  color: #282A2E
+  color: $cadet
   font-size: 36px
   font-weight: 400
 
 .section-title
-  color: #282A2E
+  color: $cadet
   font-size: 36px
   font-weight: 400
-  text-transform: uppercase
+  text-transform: none
   margin: 0px
   display: inline-block
   &:after
@@ -151,7 +236,7 @@ h2
     background: #C1C8CE
 
 h3
-  color: #282A2E
+  color: $cadet
   font-family: "Open Sans", sans-serif
   font-size: 20px
   font-weight: 400
@@ -256,9 +341,9 @@ img
         text-decoration: none
         text-decoration: none
       font-family: 'Montserrat', serif
-      text-transform: uppercase
+      text-transform: none
       font-size: 13px
-      color: #98A0A8
+      color: $teal-blue
       font-weight: 400
       margin-left: 25px
       display: inline-block
@@ -273,7 +358,7 @@ img
       -o-transition: all 0ms ease-in
       transition: all 0ms ease-in
       &:focus, &:hover
-        color: #404449
+        color: $portorico
     margin: 0px
     float: left
   .active > a
@@ -281,13 +366,13 @@ img
     background: transparent
     box-shadow: none
     transition: none
-    color: #404449
+    color: $valencia
     &:hover, &:focus
       background-color: transparent
       background: transparent
       box-shadow: none
       transition: none
-      color: #404449
+      color: $teal-blue
   li:first-child > a
     margin-left: 0px
 
@@ -351,7 +436,7 @@ img
 
 .services-2-icon h4
   font-family: 'Montserrat', sans-serif
-  color: #404449
+  color: $cadet
   font-size: 16px
   font-weight: 400
   margin: 15px 0px 0px 0px
@@ -379,7 +464,7 @@ img
     color: #282A2E
 
 .timer
-  color: #282A2E
+  color: $cadet
   font-size: 48px
   font-weight: 800
   text-transform: uppercase
@@ -1232,7 +1317,10 @@ footer p
     -ms-transition: all .5s ease-in-out
     transition: all .5s ease-in-out
     overflow: hidden
-    width: 100%
+    width: 140px
+    margin: 0 auto
+    position: relative
+    display: block
   &:hover img
     opacity: 1
 

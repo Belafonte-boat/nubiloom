@@ -1,3 +1,6 @@
+
+
+
 $(window).scroll(function() {
 // 100 = The point you would like to fade the nav in.
   
@@ -26,7 +29,63 @@ jQuery(document).ready(function($) {
   "use strict";
 
 
-  
+var config1 = {
+  "id": '559051805276274688',
+  "domId": 'twitter',
+  "maxTweets": 6,
+  "enableLinks": true,
+  "showUser": true,
+  "showTime": false,
+  "showRetweet": false
+};
+var config2 = {
+  "id": '464802200061870081',
+  "domId": 'twitter',
+  "maxTweets": 6,
+  "enableLinks": true,
+  "showUser": true,
+  "showTime": false,
+  "showRetweet": false
+};
+var config3 = {
+  "id": '559051805276274688',
+  "domId": 'twitter',
+  "maxTweets": 6,
+  "enableLinks": true,
+  "showUser": true,
+  "showTime": false,
+  "showRetweet": false
+};
+var config4 = {
+  "id": '559051805276274688',
+  "domId": 'twitter',
+  "maxTweets": 6,
+  "enableLinks": true,
+  "showUser": true,
+  "showTime": false,
+  "showRetweet": false
+};
+$("li.aws a").click(function(e){
+  e.preventDefault();
+  twitterFetcher.fetch(config1);
+  activeLink($(this));
+});
+$("li.cloud a").click(function(e){
+  e.preventDefault();
+  twitterFetcher.fetch(config2);
+  activeLink($(this));
+});
+
+activeLink($("li.aws a"));
+twitterFetcher.fetch(config1);
+
+function activeLink(elem){
+  console.log(elem)
+  $("#hash-list li a").each(function(){
+    $(this).removeClass("active");
+  })
+  $(elem).addClass("active");
+}
 
 // youtube video player
 $(window).load(function() {
