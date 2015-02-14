@@ -1,5 +1,4 @@
-
-
+//=require "ajaxchimp/jquery.ajaxchimp.min.js"
 
 $(window).scroll(function() {
 // 100 = The point you would like to fade the nav in.
@@ -15,6 +14,32 @@ $(window).scroll(function() {
   };    
 });
 
+function callbackFunction (resp) {
+    if (resp.result === 'success') {
+        $('#ajaxsuccess').show(500);
+        $('#ajaxsuccess').delay(4000);
+        $('#ajaxsuccess').animate({
+          height: 'toggle'  
+        }, 500, function() {
+        });           
+
+        $("#name").val('');
+        $("#email").val('');
+        $("#message").val('');
+    }else{
+
+       if (resp.result == "timeout") {
+         $('#err-timedout').slideDown('slow');
+       }
+       else {
+         $('#err-state').slideDown('slow');
+         $("#err-state").html('An error occurred: ' + resp.result + '');
+       }
+
+    }
+}
+
+
 
 // If JavaScript is enabled remove 'no-js' class and give 'js' class
 jQuery('html').removeClass('no-js').addClass('js');
@@ -28,97 +53,192 @@ if (navigator.appVersion.indexOf("Mac") !== -1) {
 jQuery(document).ready(function($) {
   "use strict";
 
+  $('#ajax-form').ajaxChimp({
+      url: '//neagen.us3.list-manage.com/subscribe/post?u=1e62400a10e44f64141215777&amp;id=f7cdb6ba7d',
+      callback: callbackFunction
+  });
 
-var config1 = {
-  "id": '559051805276274688',
-  "domId": 'twitter',
-  "maxTweets": 6,
-  "enableLinks": true,
-  "showUser": true,
-  "showTime": false,
-  "showRetweet": false
-};
-var config2 = {
-  "id": '464802200061870081',
-  "domId": 'twitter',
-  "maxTweets": 6,
-  "enableLinks": true,
-  "showUser": true,
-  "showTime": false,
-  "showRetweet": false
-};
-var config3 = {
-  "id": '559051805276274688',
-  "domId": 'twitter',
-  "maxTweets": 6,
-  "enableLinks": true,
-  "showUser": true,
-  "showTime": false,
-  "showRetweet": false
-};
-var config4 = {
-  "id": '559051805276274688',
-  "domId": 'twitter',
-  "maxTweets": 6,
-  "enableLinks": true,
-  "showUser": true,
-  "showTime": false,
-  "showRetweet": false
-};
-$("li.aws a").click(function(e){
-  e.preventDefault();
+
+
+
+  function callbackFunction(){
+    dataLayer.push({'event': 'contact-form-submitted'});
+  }
+
+  var config1 = {
+    "id": '566623283391774720',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+  var config2 = {
+    "id": '464802200061870081',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+  var config3 = {
+    "id": '562377529282269185',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+  var config4 = {
+    "id": '562377659809034245',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+  var config5 = {
+    "id": '562377771188768769',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+  var config6 = {
+    "id": '562377924079542273',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+  var config7 = {
+    "id": '562378066622943233',
+    "domId": 'twitter',
+    "maxTweets": 6,
+    "enableLinks": true,
+    "showUser": true,
+    "showTime": false,
+    "showRetweet": false,
+    "customCallback": showTweet
+  };
+
+  function showTweet(tweets){
+    var x = tweets.length;
+    var n = 0;
+    var element = document.getElementById("twitter");
+    var html = '<ul>';
+    while(n < x) {
+      html += '<li>' + tweets[n] + '</li>';
+      n++;
+    }
+    html += '</ul>';
+    element.innerHTML = html;
+
+      $("#twitter ul li").each(function(){ 
+        $(this).fadeIn(1000)
+      });
+
+  }
+  $("li.aws a").click(function(e){
+    e.preventDefault();
+
+    twitterFetcher.fetch(config1);
+    activeLink($(this));
+  });
+  $("li.cloud a").click(function(e){
+    e.preventDefault();
+    twitterFetcher.fetch(config2);
+    activeLink($(this));
+  });
+
+  $("li.awsstartups a").click(function(e){
+    e.preventDefault();
+    twitterFetcher.fetch(config1);
+    activeLink($(this));
+  });
+  $("li.awsactivate a").click(function(e){
+    e.preventDefault();
+    twitterFetcher.fetch(config2);
+    activeLink($(this));
+  });
+
+  $("li.reinvent a").click(function(e){
+    e.preventDefault();
+    twitterFetcher.fetch(config1);
+    activeLink($(this));
+  });
+  $("li.nodejs a").click(function(e){
+    e.preventDefault();
+    twitterFetcher.fetch(config2);
+    activeLink($(this));
+  });
+
+  $("li.mongodb a").click(function(e){
+    e.preventDefault();
+    twitterFetcher.fetch(config1);
+    activeLink($(this));
+  });
+
+
+
+
+  activeLink($("li.aws a"));
   twitterFetcher.fetch(config1);
-  activeLink($(this));
-});
-$("li.cloud a").click(function(e){
-  e.preventDefault();
-  twitterFetcher.fetch(config2);
-  activeLink($(this));
-});
 
-activeLink($("li.aws a"));
-twitterFetcher.fetch(config1);
+  function activeLink(elem){
 
-function activeLink(elem){
-  console.log(elem)
-  $("#hash-list li a").each(function(){
-    $(this).removeClass("active");
-  })
-  $(elem).addClass("active");
-}
+    $("#hash-list li a").each(function(){
+      $(this).removeClass("active");
+    })
+    $(elem).addClass("active");
+  }
 
-// youtube video player
-$(window).load(function() {
-  $(".player").mb_YTPlayer();
- 
-});
+  // youtube video player
+  $(window).load(function() {
+    $(".player").mb_YTPlayer();
+   
+  });
 
-// Fitvids 
-$(window).load(function() {
-  $("section").fitVids();
-});  
+  // Fitvids 
+  $(window).load(function() {
+    $("section").fitVids();
+  });  
 
 
-// superslides for fullwidth video
-  $('#slides').superslides();
-	
-     
+  // superslides for fullwidth video
+    $('#slides').superslides();
+  	
+       
 
-// External links   
-	$(window).load(function() {
-			$('a[rel=external]').attr('target','_blank');	
-	});
+  // External links   
+  	$(window).load(function() {
+  			$('a[rel=external]').attr('target','_blank');	
+  	});
 
-// Tooltips		
-    $('body').tooltip({
-        delay: { show: 300, hide: 0 },
-        selector: '[data-toggle=tooltip]:not([disabled])'
-    });
-    
+  // Tooltips		
+      $('body').tooltip({
+          delay: { show: 300, hide: 0 },
+          selector: '[data-toggle=tooltip]:not([disabled])'
+      });
+      
 
 
 
- 
+   
    //Images portfolio
 
   // magnific popoup 
@@ -497,39 +617,8 @@ $('.counter-item').appear(function() {
 		var data_string = $('#ajax-form').serialize(); // Collect data from form
 		//alert(data_string);
 
-		$.ajax({
-			type: "POST",
-			url: $('#ajax-form').attr('action'),
-			data: data_string,
-			timeout: 6000,
-			error: function(request,error) {
-				if (error == "timeout") {
-					$('#err-timedout').slideDown('slow');
-				}
-				else {
-					$('#err-state').slideDown('slow');
-					$("#err-state").html('An error occurred: ' + error + '');
-				}
-			},
-			success: function() {
 
-        
-    $('#ajaxsuccess').show(500);
-    $('#ajaxsuccess').delay(4000);
-    $('#ajaxsuccess').animate({
-      height: 'toggle'  
-    }, 500, function() {
-    });           
-
-        $("#name").val('');
-        $("#email").val('');
-        $("#message").val('');
-			}
-		});
-
-		return false; // stops user browser being directed to the php file
-	}); // end click function
-     
+	 	});
 
 
 

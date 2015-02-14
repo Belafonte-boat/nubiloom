@@ -3,26 +3,34 @@
   .container
     .row
       .col-md-12.text-center
-        %h2.section-title contact
+        %h2.section-title Contact
     .row.spacer40
     .row
-      %form#ajax-form.form-main{:action => "php/mail-it.php", :method => "post", :name => "ajax-form", :role => "form"}
+
+
+
+
+
+
+      %form#ajax-form.form-main{:method => "post", :name => "ajax-form", :role => "form", :novalidate => ""}
         .col-xs-12
           .row
             .form-group.col-xs-6
-              %label{:for => "name2"} name
-              %input#name2.form-control{:name => "name", :onblur => "if(this.value == '') this.value='Name'", :onfocus => "if(this.value == 'Name') this.value=''", :type => "text", :value => "Name"}/
+              %label{:for => "mce-FNAME"} name
+              %input#name2.form-control{:name => "FNAME", :onblur => "if(this.value == '') this.value='Name'", :onfocus => "if(this.value == 'Name') this.value=''", :type => "text", :value => "Name"}/
               #err-name.error Please enter name
             .form-group.col-xs-6
-              %label{:for => "email2"} email
-              %input#email2.form-control{:name => "email", :onblur => "if(this.value == '') this.value='E-mail';", :onfocus => "if(this.value == 'E-mail') this.value='';", :type => "text", :value => "E-mail"}/
+              %label{:for => "mce-EMAIL"} email
+              %input#email2.form-control{:name => "EMAIL", :onblur => "if(this.value == '') this.value='E-mail';", :onfocus => "if(this.value == 'E-mail') this.value='';", :type => "text", :value => "E-mail"}/
               #err-emailvld.error E-mail is not a valid format
           .row
             .form-group.col-xs-12
-              %label{:for => "message2"} message
-              %textarea#message2.form-control{:name => "message", :onblur => "if(this.value == '') this.value='Message'", :onfocus => "if(this.value == 'Message') this.value=''"} Message
+              %label{:for => "mce-MMESSAGE"} message
+              %textarea#message2.form-control{:name => "MESSAGE", :onblur => "if(this.value == '') this.value='Message'", :onfocus => "if(this.value == 'Message') this.value=''"} Message
               #err-message.error Please enter message
           .row.spacer30
+          %div{:style => "position: absolute; left: -5000px;"}
+            %input{:name => "b_f1996d7493846a4c847c88470_53e1a9a188", :tabindex => "-1", :type => "text", :value => ""}/
           .row
             .col-md-8.col-md-offset-2
               %p.text-center We will NEVER spam/sell/trade your personal information.
@@ -33,6 +41,7 @@
               #err-form.error There was a problem validating the form please check!
               #err-timedout.error The connection to the server timed out!
               #err-state.error
+              
               %button#send.btn.btn-default{:type => "submit"} Submit
   .top
     .top-line
@@ -43,14 +52,11 @@
       .col-xs-12.col-sm-6.col-md-6
         %h4 KEEP IN TOUCH
         .footer-socials
-          %a{:href => "#"}
-            %i.fa.fa-facebook
-          %a{:href => "#"}
-            %i.fa.fa-google-plus
-          %a{:href => "#"}
+          
+          %a{:href => "https://twitter.com/nubiloom"}
             %i.fa.fa-twitter
-          %a{:href => "#"}
-            %i.fa.fa-pinterest
+          %a{:href => "https://www.linkedin.com/company/nubiloom"}
+            %i.fa.fa-linkedin
       .col-xs-12.col-sm-6.col-md-6
         %h4 ADDRESS
         %p
@@ -58,7 +64,7 @@
           %br/
           10144 Torino
         %p
-          +39 011 225 7321
+          +390110675001
           %br/
           %a{:href => "#"} www.nubiloom.com
           %br/

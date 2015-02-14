@@ -6,6 +6,7 @@ gem "middleman-bower"
 gem "middleman", '~> 3.3.3'
 gem "middleman-favicon-maker"
 gem "middleman-deploy"
+gem 'middleman-s3_sync'
 
 gem "middleman-minify-html"
 gem "therubyracer", :platforms => [:ruby]

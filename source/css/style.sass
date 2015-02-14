@@ -19,12 +19,24 @@ $colonial-white: #F2E4BD
   border-radius: $radius
   background-clip: padding-box  /* stops bg color from leaking outside the border: */
 
+#parallax-home
+  background-image: image-url('slider-main/header.png')
+#parallax-four
+  background-image: image-url('parallax/back.png')
+#parallax-two
+  background-image: image-url('parallax/back2.png')
+#parallax-one
+  background-image: image-url('parallax/back.png')
+
 p.work
   margin-top: 20px
   font-size: 20px
   color: $teal-blue
   font-family: 'Montserrat', sans-serif
-//twitter
+#twitter
+  ul
+    li
+      display: none
 h2.interval
   text-align: left
   margin-top: 20px
@@ -1326,6 +1338,7 @@ footer p
 
 .slider-text
   height: 100%
+  min-height: 210px
   padding: 40px 40px 25px 40px
   background: #F5F6FA
   color: #98A0A8

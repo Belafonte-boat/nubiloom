@@ -37,7 +37,7 @@
   var showImages = false;
   var targetBlank = true;
   var lang = 'en';
-
+ console.log("twitterFetcher")
   function handleTweets(tweets){
     if (customCallbackFunction === null) {
       var x = tweets.length;

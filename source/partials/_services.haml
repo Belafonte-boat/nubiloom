@@ -6,7 +6,7 @@
     .row.spacer40
     .row
       .col-md-12.text-center
-        %h2.section-title services
+        %h2.section-title Services
     .row.spacer50
     
     .row
@@ -18,23 +18,7 @@
             %h4 EC2 Instances
           .services-2-text
             %p Elastic Cloud Compute (EC2) provides the core of Amazon's scalable computing offering. With complete control over your virtual computing environment, EC2 lets you create and boot new server instances in minutes, scaling dynamically to handle fluctuations in demand.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/rds.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 RDS Databases
-          .services-2-text
-            %p RDS provides Relational Database Services for your application. RDS also handles automatic database backups with user-defined retention periods, reducing the time a DBA spends doing database maintenance tasks.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/ddb.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 No-SQL Databses
-          .services-2-text
-            %p Amazon DynamoDB is a fully managed NoSQL database service that provides extremely fast and predictable performance with seamless scalability. Amazon SimpleDB provides a non-relational service designed for smaller datasets. Or we can run your own NoSQL databases on Amazon EC2 and Amazon EBS with full control over your database.
-    .row
+
       .col-md-4.col-xs-12
         .services-2
           .services-2-icon
@@ -51,23 +35,9 @@
             %h4 IAM Access Security
           .services-2-text
             %p The Identity and Access Management (IAM) capabilities of AWS give you secure access control for both users and integrated systems. Integration with existing identity federation systems eliminates duplication when granting and revoking access.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/sqs.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 SQS Message Queuing
-          .services-2-text
-            %p Queueing and delivering messages between servers requires a high degree of scalability and reliability. Amazon SQS is a hosted service which gives AWS developers an easy-to-integrate solution to this problem.
+
     .row
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/s3.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 S3 Storage
-          .services-2-text
-            %p Amazon's S3 provides scalable storage in the cloud for your application's data. Using S3 eliminates the issues associated with anticipating user/system data and trying to purchase hardware accordingly. With S3, you have access to exactly the amount of storage space you need at all times.
+
       .col-md-4.col-xs-12
         .services-2
           .services-2-icon
@@ -76,48 +46,7 @@
             %h4 Cache and CDN
           .services-2-text
             %p ElastiCache automatically detects and replaces failed nodes, reducing the overhead associated with self-managed infrastructures and provides a resilient system that mitigates the risk of overloaded databases, which slow website and application load times. 
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/ebs.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 EBS Load Balancing
-          .services-2-text
-            %p Elastic Load Balancing (ELB) gives AWS developers a way to automatically distribute incoming traffic to multiple EC2 instances which helps with fault tolerance, application performance, and even multi-zone deployments.
-    .row
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/route53.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 DNS Route 53
-          .services-2-text
-            %p Route 53 effectively connects user requests to infrastructure running in AWS and can also be used to route users to infrastructure outside of AWS. You can use Amazon Route 53 to configure DNS health checks to route traffic to healthy endpoints or to independently monitor the health of your application and its endpoints.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/cw.svg", "data-ani"=> "animated", "data-type"=> "fadeIn"
-            %h4 Cloudwatch monitoring
-          .services-2-text
-            %p Cloudwatch provides customizable monitors and alerts, allowing your application to react automatically to pre-defined critical events like CPU over-utilization.
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/lambda.svg", "data-ani"=> "animated", "data-type" => "fadeIn"
-            %h4 Lambda
-          .services-2-text
-            %p A compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information.
-    .row
-      .col-md-4.col-xs-12
-        .services-2
-          .services-2-icon
-            %i
-              = image_tag "icons/ses.svg", "data-ani"=> "animated", "data-type" => "fadeIn"
-            %h4 Transactional emails
-          .services-2-text
-            %p With Amazon SES,Simple Email Service, you can send transactional email, marketing messages, or any other type of high-quality content and you only pay for what you use.
+
       .col-md-4.col-xs-12
         .services-2
           .services-2-icon
