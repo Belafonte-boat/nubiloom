@@ -23,9 +23,12 @@ function callbackFunction (resp) {
         }, 500, function() {
         });           
 
-        $("#name").val('');
-        $("#email").val('');
-        $("#message").val('');
+        $("#mce-FNAME").val('');
+        $("#mce-LNAME").val('');
+        $("#mce-EMAIL").val('');
+        $("#mce-MPHONE").val('');
+        $("#mce-MMESSAGE").val('');
+        dataLayer.push({'event': 'contact-form-submitted'});
     }else{
 
        if (resp.result == "timeout") {
@@ -61,9 +64,6 @@ jQuery(document).ready(function($) {
 
 
 
-  function callbackFunction(){
-    dataLayer.push({'event': 'contact-form-submitted'});
-  }
 
   var config1 = {
     "id": '566623283391774720',
@@ -559,8 +559,8 @@ $('.counter-item').appear(function() {
 
 		var error = false; // we will set this true if the form isn't valid
 
-		var name = $('input#name2').val(); // get the value of the input field
-		if(name == "" || name == " " || name == "Name") {
+		var name = $('input#mce-FNAME').val(); // get the value of the input field
+		if(name == "" || name == " " || name == "First Name") {
     $('#err-name').show(500);
     $('#err-name').delay(4000);
     $('#err-name').animate({
@@ -571,8 +571,34 @@ $('.counter-item').appear(function() {
       error = true; // change the error state to true
 		}
 
+  var last = $('input#mce-LNAME').val(); // get the value of the input field
+    if(last == "" || last == " " || last == "Last Name") {
+    $('#err-last').show(500);
+    $('#err-last').delay(4000);
+    $('#err-last').animate({
+      height: 'toggle'  
+    }, 500, function() {
+      // Animation complete.
+    }); 
+      error = true; // change the error state to true
+    }
+
+    var phone = $('input#mce-MPHONE').val(); // get the value of the input field
+    if(phone == "" || phone == " " || phone == "Phone") {
+    $('#err-phone').show(500);
+    $('#err-phone').delay(4000);
+    $('#err-phone').animate({
+      height: 'toggle'  
+    }, 500, function() {
+      // Animation complete.
+    }); 
+      error = true; // change the error state to true
+    }
+
+
+
 		var email_compare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
-		var email = $('input#email2').val().toLowerCase(); // get the value of the input field
+		var email = $('input#mce-EMAIL').val().toLowerCase(); // get the value of the input field
 		if (email == "" || email == " " || email == "E-mail") { // check if the field is empty
 			$('#err-email').fadeIn('slow'); // error - empty
 			error = true;
@@ -588,7 +614,7 @@ $('.counter-item').appear(function() {
 			error = true;
 		}
     
-		var message = $('textarea#message2').val(); // get the value of the input field
+		var message = $('textarea#mce-MMESSAGE').val(); // get the value of the input field
 		if(message == "" || message == " " || message == "Message") {
 
       

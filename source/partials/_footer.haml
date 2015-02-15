@@ -16,17 +16,24 @@
         .col-xs-12
           .row
             .form-group.col-xs-6
-              %label{:for => "mce-FNAME"} name
-              %input#name2.form-control{:name => "FNAME", :onblur => "if(this.value == '') this.value='Name'", :onfocus => "if(this.value == 'Name') this.value=''", :type => "text", :value => "Name"}/
-              #err-name.error Please enter name
+              %label{:for => "mce-FNAME"} First Name
+              %input#mce-FNAME.form-control{:name => "FNAME", :onblur => "if(this.value == '') this.value='First Name'", :onfocus => "if(this.value == 'First Name') this.value=''", :type => "text", :value => "First Name"}/
+              #err-name.error Please enter first name
+              %label{:for => "mce-LNAME"} Last Name
+              %input#mce-LNAME.form-control{:name => "LNAME", :onblur => "if(this.value == '') this.value='Last Name'", :onfocus => "if(this.value == 'Last Name') this.value=''", :type => "text", :value => "Last Name"}/
+              #err-last.error Please enter last name
+              
             .form-group.col-xs-6
               %label{:for => "mce-EMAIL"} email
-              %input#email2.form-control{:name => "EMAIL", :onblur => "if(this.value == '') this.value='E-mail';", :onfocus => "if(this.value == 'E-mail') this.value='';", :type => "text", :value => "E-mail"}/
+              %input#mce-EMAIL.form-control{:name => "EMAIL", :onblur => "if(this.value == '') this.value='E-mail';", :onfocus => "if(this.value == 'E-mail') this.value='';", :type => "text", :value => "E-mail"}/
               #err-emailvld.error E-mail is not a valid format
+              %label{:for => "mce-MPHONE"} Phone
+              %input#mce-MPHONE.form-control{:name => "MPHONE", :onblur => "if(this.value == '') this.value='Phone'", :onfocus => "if(this.value == 'Phone') this.value=''", :type => "number", :value => "Phone"}/
+              #err-phone.error Please enter your phone
           .row
             .form-group.col-xs-12
               %label{:for => "mce-MMESSAGE"} message
-              %textarea#message2.form-control{:name => "MESSAGE", :onblur => "if(this.value == '') this.value='Message'", :onfocus => "if(this.value == 'Message') this.value=''"} Message
+              %textarea#mce-MMESSAGE.form-control{:name => "MMESSAGE", :onblur => "if(this.value == '') this.value='Message'", :onfocus => "if(this.value == 'Message') this.value=''"} Message
               #err-message.error Please enter message
           .row.spacer30
           %div{:style => "position: absolute; left: -5000px;"}

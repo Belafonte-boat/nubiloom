@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "middleman-livereload", :platforms => [:ruby]
 gem "middleman-bower"
 gem "middleman", '~> 3.3.3'
-gem "middleman-favicon-maker"
+gem "middleman-favicon-maker", "~> 3.7"
 gem "middleman-deploy"
 gem 'middleman-s3_sync'
 
@@ -20,4 +20,4 @@ gem "compass-h5bp"
 gem "builder"
 
 gem 'oily_png'
-gem "middleman-imageoptim", "~> 0.1.4"
+gem "middleman-imageoptim"
